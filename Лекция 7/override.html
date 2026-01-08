@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма</title>
+  <style>
+    body, p, h3 {
+      margin: 0;
+    }
+    .container.main,
+    .container.additional {
+      width: 530px;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 8px;
+      background-color: #e8e8e8;
+    }
+    .container.header {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .label {
+      font-size: 1.2em;
+      color: #434343;
+    }
+    .container .form .label + .input {
+      margin-top: 10px;
+    }
+    .container .form .input + .label {
+      margin-top: 20px;
+    }
+
+    .container .form .input {
+      border: 1px solid #434343;
+      border-radius: 4px;
+      width: 200px;
+      height: 40px;
+      background-color: #fff;
+    }
+
+    .container .form .photo {
+      height: 100px;
+      border: 2px dashed #434343;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .container .form .button {
+      padding: 10px 20px;
+      display: inline-block;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-top: 10px;
+      background-color: #434343;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* Добавить новые стили, которые переопределят старые*/
+    /* Не использовать !important*/
+    
+  </style>
+</head>
+<body>
+  <div class="main container">
+    <h3 class="header">Заполните основную информацию о себе</h3>
+    <div class="form">
+        <p class="label">ФИО</p>
+        <p class="input"></p>
+        <p class="label">Возраст </p>
+        <p class="input"></p>
+        <p class="label">Фото</p>
+        <p class="photo input"></p>
+        <div class="button">Загрузить</div>
+    </div>
+  </div>
+  <div class="additional container">
+    <h3 class="header">Заполните дополнительную информацию о себе</h3>
+    <div class="form">
+        <p class="label">Город проживания</p>
+        <p class="input" disabled></p>
+        <p class="label">Адрес</p>
+        <p class="input" disabled></p>
+        <div class="button yellow">Подтвердить</div>
+    </div>
+  </div>
+</body>
+</html>
