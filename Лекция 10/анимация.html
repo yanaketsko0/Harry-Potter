@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Анимация CSS3</title>
+  <style>
+    .corner-animation {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 150px;
+      z-index: 1000;
+    }
+    .corner-animation img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img id="frame" src="images/1.png" alt="Анимация" />
+  </div>
+
+  <script>
+    const images = [
+      "images/1.png",
+      "images/2.png",
+      "images/3.png",
+      "images/4.png",
+      "images/5.png",
+      "images/6.png"
+    ];
+    let index = 0;
+    setInterval(() => {
+      document.getElementById("frame").src = images[index];
+      index = (index + 1) % images.length;
+    }, 100);
+  </script>
+
+</body>
+</html>
