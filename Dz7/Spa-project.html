@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спа пакеты</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body, ul, p, h1, h2 {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #0B5345;
+      background: #fff;
+    }
+
+    header {
+      position: relative;
+      background-image: url('images/png-clipart-removebg-preview (1).png');
+      background-size: 30% auto;
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding: 20px 50px 0;
+      text-align: center;
+    }
+
+    /* навигация справа */
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      font-size: 22px;
+      color: #0B5345;
+      text-decoration: none;
+      border: 2px solid #0B5345;   /* прямоугольники */
+      padding: 12px 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #81aea52b;
+    }
+
+    header p {
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 100px; /* отступ ниже кнопок */
+      margin-bottom: 30px;
+    }
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 30px 50px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .description {
+      flex: 1 1 50%;
+      min-width: 300px;
+      text-align: left; /* всегда слева */
+    }
+
+    .time, .price {
+      flex: 1 1 20%;
+      min-width: 150px;
+      font-style: italic;
+      padding-top: 20px;
+      text-align: center; /* остаётся по центру */
+    }
+
+    .title { font-size: 40px; margin-bottom: 10px; }
+    .steps { font-size: 25px; margin-bottom: 10px; }
+
+    ul { padding-left: 20px; font-size: 20px; text-align: left; }
+    ul li { padding: 8px 0; }
+
+    article:hover { background-color: #81aea52b; }
+
+    @media (max-width: 1199px) {
+      header { background: none; padding-top: 20px; }
+      header p { font-size: 40px; margin-top: 20px; }
+      nav { position: static; margin-bottom: 20px; }
+      nav ul { flex-direction: column; align-items: stretch; }
+      nav ul li a {
+        width: 100%;
+        border-bottom: 1px solid #0B5345;
+        font-size: 20px;
+        padding: 15px;
+      }
+      article { flex-direction: column; align-items: flex-start; text-align: left; }
+      .description { width: 100%; text-align: left; }
+      .time, .price {
+        width: 100%;
+        background-color: #81aea52b;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+
+    /* Адаптация до 550px */
+    @media (max-width: 550px) {
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+      }
+
+      nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        color: #0B5345;
+        text-decoration: none;
+        border: none;                 
+        border-bottom: 2px solid #0B5345; /* полоса снизу */
+        padding: 12px 0;
+        text-align: center;
+      }
+
+      nav ul li a:hover {
+        background: none;             
+        color: #2874a6;               
+      }
+
+      header p {
+        font-size: 28px;
+        margin-top: 20px;
+      }
+
+      .description { text-align: left; }
+
+      .time, .price {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 18px;
+        padding: 10px;
+        background-color: #81aea52b;
+        font-weight: bold;
+        text-align: center; /* остаётся по центру */
+      }
+
+      .title { font-size: 24px; }
+      .steps, ul { font-size: 18px; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">О салоне</a></li>
+        <li><a href="#">Новости и Акции</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <p>Спа пакеты</p>
+  </header>
+
+  <article>
+    <div class="description">
+      <p class="title">Spa пакет Gold Relax для одного человека</p>
+      <p class="steps">Этапы процедуры:</p>
+      <ul>
+        <li>Посещение банно-термального комплекса 3 часа.</li>
+        <li>Скрабирование кожи кремовым скрабом Шоколад.</li>
+        <li>Обертывание (маска для тела Шоколад).</li>
+        <li>Растирание тела с использованием массажного крема Шоколад.</li>
+      </ul>
+    </div>
+    <p class="time">4 часа 20 минут</p>
+    <p class="price">125,00 BYN</p>
+  </article>
+
+  <article>
+    <div class="description">
+      <p class="title">Spa пакет LUX Gold для одного</p>
+      <p class="steps">Этапы процедуры:</p>
+      <ul>
+        <li>Посещение банно-термального комплекса 3 часа.</li>
+        <li>Программа Релакс Аромагия с использованием массажного масла</li>
+        <li>Глубокое скрабирование тела</li>
+      </ul>
+    </div>
+    <p class="time">5 часов 30 минут</p>
+    <p class="price">190,00 BYN</p>
+  </article>
+
+  <article>
+    <div class="description">
+      <p class="title">Spa пакет Relax для двоих</p>
+      <p class="steps">Этапы процедуры:</p>
+      <ul>
+        <li>Посещение банно-термального комплекса 3 часа.</li>
+        <li>СПА-процедура на выбор: программа Релакс Аромагия с использованием массажного масла / Глубокое скрабирование тела</li>
+      </ul>
+    </div>
+    <p class="time">3 часа 30 минут</p>
+    <p class="price">160,00 BYN</p>
+  </article>
+
+  <article>
+    <div class="description">
+      <p class="title">Spa пакет LUX Relax для двоих</p>
+      <p class="steps">Этапы процедуры:</p>
+      <ul>
+        <li>Аква зона + Посещение банно-термального комплекса 3 часа.</li>
+        <li>Скрабирование кожи кремовым скрабом для тела Манго.</li>
+        <li>Обертывание (маска для тела Манго).</li>
+        <li>Растирание тела с использованием массажного крема Манго.</li>
+      </ul>
+    </div>
+    <p class="time">5 часов</p>
+    <p class="price">250,00 BYN</p>
+  </article>
+</body>
+</html>
